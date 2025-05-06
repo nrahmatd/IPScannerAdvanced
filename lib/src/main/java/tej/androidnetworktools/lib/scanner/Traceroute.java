@@ -58,15 +58,15 @@ public class Traceroute {
 
         if (routeMatcher.find()) {
             Route route = new Route();
-            route.rawAddress = routeMatcher.group(2);
+            route.setRawAddress(routeMatcher.group(2));
 
-            if (route.rawAddress != null) {
-                Matcher ipAddressMatcher = ipAddressPattern.matcher(route.rawAddress);
+            if (route.getRawAddress() != null) {
+                Matcher ipAddressMatcher = ipAddressPattern.matcher(route.getRawAddress());
 
                 if (ipAddressMatcher.find()) {
-                    route.ipAddress = ipAddressMatcher.group(1);
+                    route.setIpAddress(ipAddressMatcher.group(1));
                 } else {
-                    route.ipAddress = route.rawAddress;
+                    route.setIpAddress(route.getRawAddress());
                 }
             }
 
@@ -108,7 +108,7 @@ public class Traceroute {
                         Route route = parseRoute(result);
 
                         if (route != null) {
-                            if (route.rawAddress.equals(lastRoute)) {
+                            if (route.getRawAddress().equals(lastRoute)) {
                                 isRunning = false;
                                 handler.post(() -> onTracerouteListener.onComplete(routes));
                                 return;
@@ -117,7 +117,7 @@ public class Traceroute {
                             routes.add(route);
                             handler.post(() -> onTracerouteListener.onRouteAdd(route));
 
-                            lastRoute = route.rawAddress;
+                            lastRoute = route.getRawAddress();
                         }
                     }
                 } catch (ExecutionException | InterruptedException e) {

@@ -16,6 +16,10 @@
 - **Coroutines** - For asynchronous network operations.
 - **NetworkScanner API** - To detect devices in the network.
 
+## Play Store
+
+- Link: https://play.google.com/store/apps/details?id=com.codelabs.ipscanneradvanced
+
 ## 📲 Installation Guide
 
 1. Clone this repository:
