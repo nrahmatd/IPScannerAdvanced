@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "812430737027",
+    "project_id": "ip-scanner-advanced",
+    "storage_bucket": "ip-scanner-advanced.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:812430737027:android:f92077c46c925a4f6c65b6",
+        "android_client_info": {
+          "package_name": "com.codelabs.ipscanneradvanced"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTGOnCMdoEGLI_kwX7zIGgrLLDzxOoX14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
